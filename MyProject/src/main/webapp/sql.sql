@@ -8,7 +8,6 @@ CREATE TABLE spec(
 num NUMBER(10),
 id VARCHAR2(50),
 major VARCHAR2(50),
-specPoint NUMBER(3),
 score NUMBER(3),
 toeic NUMBER(3),
 toeicSpeaking VARCHAR2(7),
@@ -35,9 +34,12 @@ NOCACHE;
 DROP SEQUENCE num_spec
 
 CREATE TABLE member(
-id VARCHAR2(20),
+email VARCHAR2(50),
+nickname VARCHAR2(50) NOT NULL,
 pw VARCHAR2(20) NOT NULL,
-CONSTRAINT member_pk PRIMARY KEY(id)
+tel VARCHAR2(20) NOT NULL,
+post_content VARCHAR2(500),
+CONSTRAINT member_pk PRIMARY KEY(email)
 )
 
 DROP TABLE member CASCADE CONSTRAINTS;

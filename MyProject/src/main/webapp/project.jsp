@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="kr">
 
@@ -5,7 +7,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="http://www.googletagmanager.com/gtag/jse15e?id=UA-170631814-1"></script>
+<script async src="../www.googletagmanager.com/gtag/jse15e?id=UA-170631814-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -315,8 +317,8 @@
                             <label for="toeic_sp">OPIC</label>
                             </div> 
                                      
-                            
-                            
+                            		
+                            		
                         
                                                         
                               

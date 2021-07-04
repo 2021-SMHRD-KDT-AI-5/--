@@ -2,8 +2,7 @@ package Model;
 
 public class SpecDTO {
 	private String major; // 전공
-	private int specPoint; // 스펙지수
-	private int score; // 학점
+	private double grade; // 학점
 	private int toeic; // 토익
 	private String toeicSpeaking; // 토익스피킹
 	private String opic; // 오픽 -> 등급순(AL, IH, IM3, IM2, IM1, IL, NH, NM, NL)
@@ -14,12 +13,11 @@ public class SpecDTO {
 	private int award; // 수상내역
 	private int volunteer; // 교내/사회/봉사
 	
-	public SpecDTO(String major, int specPoint, int score, int toeic, String toeicSpeaking, String opic,
+	public SpecDTO(String major, double grade, int toeic, String toeicSpeaking, String opic,
 			int foreignLanguage, int certificate, int overseasExperience, int intern, int award, int volunteer) {
 		
 		this.major = major;
-		this.specPoint = specPoint;
-		this.score = score;
+		this.grade = grade;
 		this.toeic = toeic;
 		this.toeicSpeaking = toeicSpeaking;
 		this.opic = opic;
@@ -37,17 +35,11 @@ public class SpecDTO {
 	public void setMajor(String major) {
 		this.major = major;
 	}
-	public int getSpecPoint() {
-		return specPoint;
+	public double getGrade() {
+		return grade;
 	}
-	public void setSpecPoint(int specPoint) {
-		this.specPoint = specPoint;
-	}
-	public int getScore() {
-		return score;
-	}
-	public void setScore(int score) {
-		this.score = score;
+	public void setGrade(double grade) {
+		this.grade = grade;
 	}
 	public int getToeic() {
 		return toeic;

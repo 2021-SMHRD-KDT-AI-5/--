@@ -1,35 +1,38 @@
 package Controller;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import Command.Command;
 import Model.MemberDAO;
 import Model.MemberDTO;
 
-public class LoginCon implements Command{
+public class joinCon implements Command{
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		String moveURL = null;
-		HttpSession session = request.getSession();
-
-		String email = request.getParameter("email");
-		String pw = request.getParameter("pw");
 		
+		String email = request.getParameter("email");
+		String nickname = request.getParameter("nickname");
+		String pw = request.getParameter("pw");
+		String tel = request.getParameter("tel");
+		String post_content = request.getParameter("post_content");
+		
+		MemberDTO member = new MemberDTO(email, nickname, pw, tel, post_content);
 		MemberDAO dao = new MemberDAO();
-		MemberDTO member = dao.login(new MemberDTO(email, pw));
+		int cnt = dao.join(member);
 		
 		if(member != null) {
-			session.setAttribute("email", member.getEmail());
-			moveURL = "project.jsp";
+			moveURL = "contact.html";
 		}else {
-			moveURL = "contact.jsp";
+			moveURL = "contact.html";
 		}
 
-		return moveURL;
-		
+	return moveURL;
 	}
 
 }
