@@ -3,6 +3,19 @@
 
 -- ȸ�� ���̺� ����
 -- ���̺� ��Ҵ� ���̵�, ��й�ȣ
+
+CREATE TABLE license(
+field VARCHAR2(20),
+name VARCHAR2(50),
+content VARCHAR2(200),
+link VARCHAR2(200),
+terms VARCHAR2(100),
+CONSTRAINT license_pk PRIMARY KEY(name)
+)
+
+select * from license;
+
+DROP TABLE license CASCADE CONSTRAINTS; 
    
 CREATE TABLE spec(
 num NUMBER(10),
