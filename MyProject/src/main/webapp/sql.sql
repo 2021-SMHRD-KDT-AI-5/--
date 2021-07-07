@@ -1,8 +1,8 @@
--- ½ºÆå Å×ÀÌºí »ý¼º 
--- Å×ÀÌºí ¿ä¼Ò´Â ½ÃÄö½º, ¾ÆÀÌµð, ½ºÆå(11ÄÃ·³)
+-- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ 
+-- ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½Ò´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½, ï¿½ï¿½ï¿½ï¿½(11ï¿½Ã·ï¿½)
 
--- È¸¿ø Å×ÀÌºí »ý¼º
--- Å×ÀÌºí ¿ä¼Ò´Â ¾ÆÀÌµð, ºñ¹Ð¹øÈ£
+-- È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½
+-- ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½Ò´ï¿½ ï¿½ï¿½ï¿½Ìµï¿½, ï¿½ï¿½Ð¹ï¿½È£
    
 CREATE TABLE spec(
 num NUMBER(10),
@@ -44,12 +44,30 @@ CONSTRAINT member_pk PRIMARY KEY(email)
 
 DROP TABLE member CASCADE CONSTRAINTS;
 
+CREATE TABLE bbs(
+num NUMBER(6),
+nickname VARCHAR2(50) NOT NULL,
+title VARCHAR2(100) NOT NULL,
+contents VARCHAR2(1000) NOT NULL,
+bbstime VARCHAR2(100) NOT NULL,
+CONSTRAINT bbs_pk PRIMARY KEY(num)
+)
+
+DROP TABLE bbs CASCADE CONSTRAINTS;
+
+CREATE SEQUENCE num_bbs
+INCREMENT by 1
+START with 1
+MINVALUE 1
+MAXVALUE 1000000
+NOCYCLE
+NOCACHE;
+
 SELECT * FROM spec
 
 SELECT * FROM member
 
-
-
+SELECT * FROM bbs
 
 
 

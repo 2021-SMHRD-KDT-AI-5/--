@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import Command.Command;
 import Controller.LoginCon;
+import Controller.bbsCon;
 import Controller.joinCon;
 import Controller.specCon;
 
@@ -31,6 +32,8 @@ public class FrontContorller extends HttpServlet {
 			command = new specCon();
 		}else if(resultURI.equals("joinCon.do")) {
 			command = new joinCon();
+		}else if(resultURI.equals("bbsCon.do")) {
+			command = new bbsCon();
 		}
 		
 		String moveURL = command.execute(request, response);

@@ -23,9 +23,9 @@ public class LoginCon implements Command{
 		
 		if(member != null) {
 			session.setAttribute("email", member.getEmail());
-			moveURL = "project.jsp";
+			moveURL = "webfactory/project.jsp";
 		}else {
-			moveURL = "contact.jsp";
+			moveURL = "webfactory/contact.html";
 		}
 
 		return moveURL;

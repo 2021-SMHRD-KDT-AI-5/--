@@ -26,10 +26,10 @@ public class joinCon implements Command{
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.join(member);
 		
-		if(member != null) {
-			moveURL = "contact.html";
+		if(cnt > 0) {
+			moveURL = "webfactory/contact.html";
 		}else {
-			moveURL = "contact.html";
+			moveURL = "webfactory/contact.html";
 		}
 
 	return moveURL;

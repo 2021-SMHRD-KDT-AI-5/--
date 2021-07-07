@@ -50,7 +50,7 @@ public class specCon implements Command {
 				e.printStackTrace();
 			}
 		}else {
-			moveURL = "project.jsp";
+			moveURL = "webfactory/project.jsp";
 		}
 			
 		return moveURL;
