@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import Command.Command;
 import Controller.LoginCon;
+import Controller.bbsCon;
+import Controller.joinCon;
+import Controller.specCon;
 
 @WebServlet("*.do")
 public class FrontContorller extends HttpServlet {
@@ -16,7 +19,8 @@ public class FrontContorller extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
+		
 		String resultURI = request.getRequestURI().substring(1);
 		System.out.println(resultURI);
 		
@@ -24,6 +28,12 @@ public class FrontContorller extends HttpServlet {
 		
 		if(resultURI.equals("LoginCon.do")) {
 			command = new LoginCon();
+		}else if(resultURI.equals("specCon.do")) {
+			command = new specCon();
+		}else if(resultURI.equals("joinCon.do")) {
+			command = new joinCon();
+		}else if(resultURI.equals("bbsCon.do")) {
+			command = new bbsCon();
 		}
 		
 		String moveURL = command.execute(request, response);

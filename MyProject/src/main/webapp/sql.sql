@@ -1,14 +1,26 @@
--- ½ºÆå Å×ÀÌºí »ý¼º 
--- Å×ÀÌºí ¿ä¼Ò´Â ½ÃÄö½º, ¾ÆÀÌµð, ½ºÆå(11ÄÃ·³)
+-- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ 
+-- ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½Ò´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìµï¿½, ï¿½ï¿½ï¿½ï¿½(11ï¿½Ã·ï¿½)
 
--- È¸¿ø Å×ÀÌºí »ý¼º
--- Å×ÀÌºí ¿ä¼Ò´Â ¾ÆÀÌµð, ºñ¹Ð¹øÈ£
+-- È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½
+-- ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½Ò´ï¿½ ï¿½ï¿½ï¿½Ìµï¿½, ï¿½ï¿½Ð¹ï¿½È£
+
+CREATE TABLE license(
+field VARCHAR2(20),
+name VARCHAR2(50),
+content VARCHAR2(200),
+link VARCHAR2(200),
+terms VARCHAR2(100),
+CONSTRAINT license_pk PRIMARY KEY(name)
+)
+
+select * from license;
+
+DROP TABLE license CASCADE CONSTRAINTS; 
    
 CREATE TABLE spec(
 num NUMBER(10),
 id VARCHAR2(50),
 major VARCHAR2(50),
-specPoint NUMBER(3),
 score NUMBER(3),
 toeic NUMBER(3),
 toeicSpeaking VARCHAR2(7),
@@ -35,19 +47,40 @@ NOCACHE;
 DROP SEQUENCE num_spec
 
 CREATE TABLE member(
-id VARCHAR2(20),
+email VARCHAR2(50),
+nickname VARCHAR2(50) NOT NULL,
 pw VARCHAR2(20) NOT NULL,
-CONSTRAINT member_pk PRIMARY KEY(id)
+tel VARCHAR2(20) NOT NULL,
+post_content VARCHAR2(500),
+CONSTRAINT member_pk PRIMARY KEY(email)
 )
 
 DROP TABLE member CASCADE CONSTRAINTS;
+
+CREATE TABLE bbs(
+num NUMBER(6),
+nickname VARCHAR2(50) NOT NULL,
+title VARCHAR2(100) NOT NULL,
+contents VARCHAR2(1000) NOT NULL,
+bbstime VARCHAR2(100) NOT NULL,
+CONSTRAINT bbs_pk PRIMARY KEY(num)
+)
+
+DROP TABLE bbs CASCADE CONSTRAINTS;
+
+CREATE SEQUENCE num_bbs
+INCREMENT by 1
+START with 1
+MINVALUE 1
+MAXVALUE 1000000
+NOCYCLE
+NOCACHE;
 
 SELECT * FROM spec
 
 SELECT * FROM member
 
-
-
+SELECT * FROM bbs
 
 
 

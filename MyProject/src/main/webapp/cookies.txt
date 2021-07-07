@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+web-factory.co.kr	TRUE	/	FALSE	1999999999	user_ip	211.223.50.70
+web-factory.co.kr	TRUE	/	FALSE	1999999999	ci_session	iic1di800ob3i13mee9vqmj81obq9jd8
+web-factory.co.kr	TRUE	/	FALSE	1999999999	csrf_cookie_name	119184e50aba5f574758028d9c534c32
+
