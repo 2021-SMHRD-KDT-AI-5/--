@@ -35,7 +35,7 @@
 <link rel="shortcut icon" href="public/images/common/favicon.ico" type="image/x-icon" />
 
 <!-- Basic CSS -->
-<link href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="public/css/animate.css">
 <link rel="stylesheet" type="text/css" href="public/css/base.css">
 <link rel="stylesheet" type="text/css" href="public/css/layout.css">
@@ -46,8 +46,8 @@
 <link rel="stylesheet" type="text/css" href="public/jquery/fullpage/fullpage.min.css">
 
 <!-- Basic Jquery -->
-<script src="../cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha256-FiZMk1zgTeujzf/+vomWZGZ9r00+xnGvOgXoj0Jo1jA=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha256-FiZMk1zgTeujzf/+vomWZGZ9r00+xnGvOgXoj0Jo1jA=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script language="JavaScript" src="public/jquery/basic/common.js"></script>
 <script language="JavaScript" src="public/jquery/basic/webfactory.js"></script>
 <script type="text/javascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
@@ -67,7 +67,7 @@
 <script src="public/jquery/bootstrap/main.js"></script>
 
 <!-- 다음 카카오 -->
-<script type="text/javascript" charset="UTF-8" src="../t1.daumcdn.net/adfit/static/kp.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://t1.daumcdn.net/adfit/static/kp.js"></script>
 <script type="text/javascript">
       kakaoPixel('6807620432588328926').pageView();
       kakaoPixel('6807620432588328926').search({
@@ -86,8 +86,9 @@
       top:0px; transition: all 0.2s ease ; -webkit-transition: all 0.2s ease;
        -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; }
     input:focus, input:not(:placeholder-shown){ border-bottom: solid 1px #8aa1a1; outline:none; }
-
+	textarea,input,select,button{-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-border-radius:0;border-radius:0;border:0;line-height:normal}
 </style>
+
 </head>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
@@ -122,10 +123,10 @@
         <div class="header-mid">
             <nav>
                 <ul>
-                    <li><a href="about.html">회사소개</a></li>
-                    <li><a href="project.html">스팩입력</a></li>
-                    <li><a href="contact.html">문의하기</a></li>
-                    <li><a href="board.html">게시판</a></li>
+                    <li><a href="about.html">자격증</a></li>
+                    <li><a href="project.jsp">스팩입력</a></li>
+                    <li><a href="contact.html">로그인</a></li>
+                    <li><a href="board.jsp">게시판</a></li>
                 </ul>
             </nav>
             <a href="tel:051.714.5730" class="header-call" lang="en">051.714.5730</a>
@@ -209,12 +210,12 @@
                                 <p>함께 하실까요?</p>
                             </h3>
                         </div>
-                        <button class="main-button sub-button sub-button1 xalign" style="left : 60%;" onclick="location.href='/contact#secondPage' ">
+                        <button class="main-button sub-button sub-button1 xalign" style="left : 60%;" onclick="location.href='contact.html#secondPage' ">
                             <span class="text xalign">LOGIN<br><br>하러가기</span>
                             <span class="gooey"></span>
                         </button>
 
-                        <button class="main-button sub-button sub-button1 xalign" style="left : 40%;" onclick="location.href='/contact#secondPage' ">
+                        <button class="main-button sub-button sub-button1 xalign" style="left : 40%;" onclick="location.href='contact.html#3rdPage' ">
                             <span class="text xalign">JOIN<br><br>하러가기</span>
                             <span class="gooey"></span>
                         </button>
@@ -234,7 +235,7 @@
                     <div class="sub-table">
                         <div class="txtarea yalign">
                             <span class="sect-tit1" lang="en" style="font-size: 50px; margin-bottom: 100px;">LOGIN</span>
-                            <form action="" method="POST"> 
+                            <form action="../LoginCon.do" method="POST"> 
                                 <div class="input-box"> 
                                     <input id="username" type="text" name="email" placeholder="이메일">
                                     <label for="username">이메일</label> 
@@ -243,12 +244,14 @@
                                 <div class="input-box"> 
                                     <input id="password" type="password" name="password" placeholder="비밀번호"> 
                                     <label for="password">비밀번호</label> 
-                                </div> 
+                                </div>
+                                <div>
+	                                <button type="submit" class="main-button sub-button sub-button2" style="margin-top: 30%;" >
+	                                <span class="text xalign" style="font-size: 25px;">LOGIN</span>
+	                                <span class="gooey"></span>
+	                            	</button>
+                            	</div> 
                             </form>
-                            <button type="submit" class="main-button sub-button sub-button2" style="margin-top: 100px;" >
-                                <span class="text xalign" style="font-size: 25px;">LOGIN</span>
-                                <span class="gooey"></span>
-                            </button>
                         </div>
                         <div class="ai">
                             <span class="ai-img" style="background-image:url('public/images/sub/svs3_0.svg')" alt="일러스트"></span>
@@ -289,7 +292,7 @@
                                 
                                 <a href="javascript:void(0);" class="request-btn aniswing">회원가입 →</a>
                             </div>
-                            <form action="" name="contact_form" id="contact_form" onsubmit="return false" method="post"
+                            <form action="../joinCon.do" name="contact_form" id="contact_form" onsubmit="return false" method="post"
                              accept-charset="utf-8">
                                 <input type="hidden" name="csrf_test_name" value="119184e50aba5f574758028d9c534c32" />
                                 <input type="hidden" name="post_title" value="" />
@@ -297,6 +300,9 @@
                                 <div class="article-form">
                                     <div class="wf-form input_div" data-name="wf_company_name" id="wf_company_name">
                                         이메일은 <input type="text" name="email" class="default" autocomplete="off"> 이고,
+                                    </div>
+                                    <div class="wf-form input_div" data-name="wf_nickname" id="wf_nickname">
+                                        닉네임은 <input type="text" name="nickname" class="default" autocomplete="off"> 이고,
                                     </div>
                                     <div class="wf-form input_div" data-name="wf_tel" id="wf_tel">
                                         연락처는 <input type="text" name="tel" class="default" autocomplete="off" numberOnly> 입니다.
@@ -328,11 +334,13 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="main-button sub-button sub-button2" id="btn_submit" style="display:none;">
-                                        <span class="text xalign">enter</span>
-                                        <span class="arrow xalign" style="transform: rotate(-135deg);-webkit-transform: rotate(-135deg);"><img src="public/images/sub/icon_arrow1.svg" alt="화살"></span>
-                                        <span class="gooey"></span>
-                                    </button>
+                                    <div>
+	                                    <button type="submit" class="main-button sub-button sub-button2" id="btn_submit" style="display:none;margin-top: 60%;">
+	                                        <span class="text xalign">Join</span>
+	                                        <span class="arrow xalign" style="transform: rotate(-135deg);-webkit-transform: rotate(-135deg);"><img src="public/images/sub/icon_arrow1.svg" alt="화살"></span>
+	                                        <span class="gooey"></span>
+	                                    </button>
+                                    </div>
                                 </div>
                             </form>
                             <!--<div class="articel-agree">
@@ -473,6 +481,13 @@ $(document).ready(function() {
                     if (input_val != '') {
                         switch (form_element) {
                             case 'wf_company_name' :
+                                if ($('#wf_nickname').css('display') == 'none') {
+                                    $('#wf_nickname').show('slow').slideDown('fast');
+                                    $('#wf_nickname').removeClass('success');
+                                }
+                            break;
+                            
+                            case 'wf_nickname' :
                                 if ($('#wf_tel').css('display') == 'none') {
                                     $('#wf_tel').show('slow').slideDown('fast');
                                     $('#wf_tel').removeClass('success');
@@ -496,6 +511,16 @@ $(document).ready(function() {
                     } else {
                         switch (form_element) {
                             case 'wf_company_name' :
+                                if (frm.tel.value == '' && frm.email.value == '' && frm.post_content.value == '') {
+                                    frm.tel.value = '';
+                                    $('#wf_nickname', '#wf_tel, #wf_email, #wf_content').removeClass('success');
+                                    $('#wf_nickname', '#wf_tel, #wf_email, #wf_content').hide('slow').slideUp('fast');
+
+                                    // $('.request-btn').show('slow').slideDown('fast');
+                                }
+                            break;
+                            
+                            case 'wf_nickname' :
                                 if (frm.tel.value == '' && frm.email.value == '' && frm.post_content.value == '') {
                                     frm.tel.value = '';
                                     $('#wf_tel, #wf_email, #wf_content').removeClass('success');
@@ -532,14 +557,27 @@ $(document).ready(function() {
                                 $('#wf_tel').addClass('success');
                             }
 
+                            $('#wf_nickname').addClass('success');
                             $('#wf_email').addClass('success');
                             $('#wf_content').addClass('success');
+                        break;
+                        
+                        case 'wf_nickname' :
+                            $(this).parent().removeClass('success');
+
+                            $('#wf_company_name').addClass('success');
+                            $('#wf_content').addClass('success');
+
+                            if ($('#wf_tel').css('display') != 'none') {
+                                $('#wf_tel').addClass('success');
+                            }                            
                         break;
 
                         case 'wf_tel' :
                             $(this).parent().removeClass('success');
 
                             $('#wf_company_name').addClass('success');
+                            $('#wf_nickname').addClass('success');
                             $('#wf_content').addClass('success');
 
                             if ($('#wf_email').css('display') != 'none') {
@@ -584,18 +622,18 @@ $(document).ready(function() {
         $(this).val($(this).val().replace(/[^0-9]/g,""));
     });
 
-    $('#btn_submit').on('click', function() {
-        if (frm.company_name.value == '') {
-            alert('회사명을 입력해주세요');
-            frm.company_name.focus();
+    	$('#btn_submit').on('click', function() {
+        if (frm.email.value == '') {
+            alert('이메일을 입력해주세요');
+            frm.email.focus();
             return false;
         } else if (frm.tel.value == '') {
             alert('연락처를 입력해주세요');
             frm.tel.focus();
             return false;
-        } else if (frm.email.value == '') {
-            alert('이메일을 입력해주세요');
-            frm.email.focus();
+        } else if (frm.nickname.value == '') {
+            alert('닉네임을 입력해주세요');
+            frm.nickname.focus();
             return false;
         } else if ($('input[name=agree]').is(':checked') !== true) {
             alert('개인정보 수집과 이용에 동의해주세요');
@@ -614,11 +652,11 @@ $(document).ready(function() {
                 frm.email.focus();
                 return false;
             } else {
-                frm.post_title.value = frm.company_name.value + '님의 프로젝트 문의입니다';
+                frm.post_title.value = frm.email.value + '님의 프로젝트 문의입니다';
                 frm.submit();
             }
         }
-    });
+    }); 
 });
 
 function telValidator(args) {
@@ -640,7 +678,7 @@ function check_email(email) {
     <script type="text/javascript" src="/public/jquery/smoothscrolling/demo.js"></script>
 --->
     <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> 
-        <script type="text/javascript" src="../wcs.naver.net/wcslog.js"> </script>
+        <script type="text/javascript" src="http://wcs.naver.net/wcslog.js"> </script>
         <script type="text/javascript"> 
 if (!wcs_add) var wcs_add={};
 wcs_add["wa"] = "s_4e5c83d62def";

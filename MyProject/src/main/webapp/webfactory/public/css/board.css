@@ -1,15 +1,18 @@
-/* 메인 */
+/* 硫붿씤 */
 .mainwrap {width:100%;height:100vh;display:-webkit-flex;display:flex;}
 .mainwrap .main-body {width:100%;height:100vh;position:relative}
 
-/* 메인 요소 */
+/* 硫붿씤 �슂�냼 */
 #main1 {background-color:#f6e8ff}
 #main2 {background-color:#f8e6f3}
 #main3 {background-color:#e6eef8}
 #main4 {background-color:#f8f6e6}
 #main5 {background-color:#e5f8f1}
 
-/* 메인 텍스트 & 서브 텍스트 */
+
+
+
+/* 硫붿씤 �뀓�뒪�듃 & �꽌釉� �뀓�뒪�듃 */
 .mainwrap .main-text {top:47.8%;width:80%;z-index:1}
 .mainwrap .main-text .title-row {height:13px;margin:3px -179px 0 0;overflow:hidden}
 .mainwrap .main-text .main-title {font-size:11.250rem;color:#242424;font-weight:bold;text-align:center}
@@ -26,12 +29,12 @@ display:block;
 transform:skewX(45deg) rotateX(-180deg);
 }
 .mainwrap .main-subtext {font-size:1.125rem;bottom:17%;width:80%;line-height:1.3;position:absolute;clear:both;text-align:center;color:#505050;z-index:1}
-  /* 메인 텍스트 - 더하다 */
+  /* 硫붿씤 �뀓�뒪�듃 - �뜑�븯�떎 */
 #main1 .main-text {display:table;max-width:62.438rem}
 #main1 .main-text .row {display:table-cell}
 #main1 .main-text .row.line {width:50%;max-width:31.625rem;position: relative;}
 #main1 .main-text .row.line span {width:100%;height:16px;display:block;background:#242424;bottom:16px;position: absolute;}
-  /* 메인 텍스트 - 미디어쿼리 */
+  /* 硫붿씤 �뀓�뒪�듃 - 誘몃뵒�뼱荑쇰━ */
   @media all and (min-width:115.625rem) {
     #main1 .main-text {width:58.5%}
   }
@@ -87,7 +90,7 @@ transform:skewX(45deg) rotateX(-180deg);
     .mainwrap .main-subtext {bottom:17%;font-size:0.938rem}
   }
 
-/* 메인 캐릭터 */
+/* 硫붿씤 罹먮┃�꽣 */
 .mainwrap .main-cht {top:47%;z-index:2;opacity:.93;}
 #main1 .main-cht,
 #main2 .main-cht {left:51%}
@@ -95,7 +98,7 @@ transform:skewX(45deg) rotateX(-180deg);
 #main4 .main-cht {left:50.8%}
 #main4 .main-cht2 {top:46%;left:50.5%;z-index:0}
 #main5 .main-cht {top:0;left:50.5%}
-  /* 메인 캐릭터 - 미디어쿼리  */
+  /* 硫붿씤 罹먮┃�꽣 - 誘몃뵒�뼱荑쇰━  */
   @media all and (max-width:75.000rem) {
     .mainwrap .main-cht {width:50%;}
     .mainwrap .main-cht img {width:100%}
@@ -127,7 +130,7 @@ transform:skewX(45deg) rotateX(-180deg);
     .mainwrap .main-cht img {max-width:100%;height:auto}
   }
 
-/* 메인 오브젝트 */
+/* 硫붿씤 �삤釉뚯젥�듃 */
 .main-object-wrap {width:100%;height:100vh;position:absolute;top:0;z-index:0}
 .main-object-wrap .main-object {position:absolute}
 
@@ -168,7 +171,7 @@ transform:skewX(45deg) rotateX(-180deg);
 #main5 .main5-oject5 {top:-0.3%;left:8.3%}
 #main5 .main5-oject6 {top:-2%;left:-1.3%}
 
-  /* 메인 오브젝트 미디어쿼리 */
+  /* 硫붿씤 �삤釉뚯젥�듃 誘몃뵒�뼱荑쇰━ */
   @media all and (max-width:95.625rem) {
     .main-object-wrap .main-object img {width:75%;}
     #main1 .main1-oject1 {left:0;top:0}
@@ -288,7 +291,7 @@ animation-delay: 400ms;
 
 .main1-start-button {bottom:1.5%}
 .sub-button1 {bottom: 20%}
-.sub-button2 {width: 108px;height: 102px; position: absolute; top 0px; bottom: -200px; left: 400px; display: block;margin: 70px auto 0 auto}
+.sub-button2 {width: 108px;height: 102px; position: absolute; top : 0px; bottom: -200px; left: 400px; display: block;margin: 70px auto 0 auto}
 
 .sub-button .text {line-height: 1;top: 35px}
 .sub-button .arrow {z-index: 3;bottom: 21px}
@@ -311,7 +314,7 @@ animation-delay: 400ms;
 .cont-contact .gooey:before {background-color:#ffbf63}
 .cont-contact .gooey:after{background-color:#ff7e28;box-shadow: 1px 0 3px #e2cdb3}
 
-/*정보입력*/
+/*�젙蹂댁엯�젰*/
 .input-box{position: relative; float: left; padding-right: 10px; padding-bottom: 10px;}
 .input-box .input_form{ margin:10px 0; width: 150px; padding-right: 10px;}
 .input-box > input{ background:transparent; border:none; border-bottom: solid 1px #ccc; padding:20px 0px 5px 0px; font-size:14pt; width:100%; }
@@ -382,7 +385,7 @@ appearance: none;
 
 
 
-/* Button type1.- 미디어쿼리 */
+/* Button type1.- 誘몃뵒�뼱荑쇰━ */
 
 
   @media all and (max-width:75.000rem) {
@@ -462,7 +465,7 @@ appearance: none;
 /*
 #main2 .start-link-button {background:url("/public/images/main/startbtn-main2.svg") center bottom/contain no-repeat}
 */
-  /* Button type2 - 미디어쿼리 */
+  /* Button type2 - 誘몃뵒�뼱荑쇰━ */
   @media all and (max-width:75rem) {
     .start-link-button {width:250px;height:55.66px;right:5%}
   }
@@ -491,7 +494,7 @@ appearance: none;
   }
 
 
-/* 메인 네비게이션 */
+/* 硫붿씤 �꽕鍮꾧쾶�씠�뀡 */
 .main-navigation {position: absolute; bottom:4.5%;left: calc(50% - 132px);width: 262px;height:46px;z-index: 2}
 .main-navigation:after {content:"";width:100%;height:1px;display:block;position:absolute;top:50%;background:#fff;z-index:0}
 .main-navigation .navi-button {width:46px; height:43px;z-index:2;position:absolute;right:0;left:0;top:-1px;text-align:center;z-index:3}
@@ -508,7 +511,7 @@ position:absolute;top:-3px;left:0;right:0;margin:0 auto;text-align:center;}
 .main-navigation .circle-front {z-index:2}
 .main-navigation .circle-shadow {left:2px;top:-1px;z-index:1}
   
-  /* 메인 네비게이션 미디어쿼리  */
+  /* 硫붿씤 �꽕鍮꾧쾶�씠�뀡 誘몃뵒�뼱荑쇰━  */
   @media all and (max-width:40rem) {
     .main-navigation {bottom:7%}
   }
@@ -519,11 +522,11 @@ position:absolute;top:-3px;left:0;right:0;margin:0 auto;text-align:center;}
     .main-navigation {bottom:1%}
   }
 
-/* 서브 레이아웃 */
+/* �꽌釉� �젅�씠�븘�썐 */
 .subwrap {width: 100%; height: 100vh;}
 .sub-body {width: 100%; height: 100%;}
 .cont-sub .section .fp-slides {overflow: visible;}
-/* 서브메인 텍스트 */
+/* �꽌釉뚮찓�씤 �뀓�뒪�듃 */
 .sub-headline {
   position: relative;
   width: 100%;
@@ -555,13 +558,12 @@ position:absolute;top:-3px;left:0;right:0;margin:0 auto;text-align:center;}
   content:"";
   display:inline-block;
   position:absolute;
-  background:center / cover no-repeat url("../images/sub/comma.svg")
 }
 .cont-about .sub-headline .sub-text .stxt p:first-child::after {bottom:4px}
 .cont-portfolio-list .sub-headline .sub-text .stxt p:first-child::after {bottom:-10px}
 .cont-contact .sub-headline .sub-text .stxt p:first-child::after {bottom:-10px}
 
-  /* 서브메인 텍스트 미디어쿼리  */
+  /* �꽌釉뚮찓�씤 �뀓�뒪�듃 誘몃뵒�뼱荑쇰━  */
   @media all and (max-width: 75rem){
     .sub-headline .sub-text .stxt p {font-size:7.500rem;}
     .sub-headline .sub-text .stxt p:first-child::after {width:18px;height:31.271px;right:-25px;}
@@ -606,7 +608,7 @@ position:absolute;top:-3px;left:0;right:0;margin:0 auto;text-align:center;}
   }
   
 
-/* 안녕하세요? 서브 메인 효과 */
+/* �븞�뀞�븯�꽭�슂? �꽌釉� 硫붿씤 �슚怨� */
 .cont-about .blob {
   position: absolute;
   top: 0;
@@ -648,7 +650,7 @@ position:absolute;top:-3px;left:0;right:0;margin:0 auto;text-align:center;}
 }
 */
 
-/* 서브섹션 - 텍스트  */
+/* �꽌釉뚯꽮�뀡 - �뀓�뒪�듃  */
 .sub-table {width:100%; height:100%;position: relative;}
 .sub-table .txtarea {width:50%;z-index:3}
 .sub-table .txtarea * {text-align: center;}
@@ -670,7 +672,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
 
 
 
-/* 서브섹션 - 텍스트 미디어쿼리 */
+/* �꽌釉뚯꽮�뀡 - �뀓�뒪�듃 誘몃뵒�뼱荑쇰━ */
   @media all and (max-width:95.625rem){
     .sub-table .txtarea .sect-tit1 {font-size: 20px}
     .sub-table .txtarea .sect-tit2 {
@@ -734,7 +736,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
     .sub-table .txtarea .sect-txt {font-size:0.938rem;line-height:1.3;text-align:left}
   }
 
-/* 서브섹션 - Gooey */
+/* �꽌釉뚯꽮�뀡 - Gooey */
 .subwrap .bg-gooey {position: absolute;z-index: 1}
 
 #about2.subwrap .bg-gooey {top:-9%;left:-3%;}
@@ -746,7 +748,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
 #contact2.subwrap .bg-gooey {top:-5%;left:-1%;}
 #contact3.subwrap .bg-gooey {top:-7.5%; right:1.8%;}
 
-  /* 서브섹션 - Gooey 미디어쿼리 */
+  /* �꽌釉뚯꽮�뀡 - Gooey 誘몃뵒�뼱荑쇰━ */
   @media all and (max-width:64rem) {  
     .subwrap .bg-gooey img {width:100%}
     .subwrap .bg-gooey svg {width:100%}
@@ -800,7 +802,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
   .subwrap .bg-gooey img {width:100%}
 } */
 
-/* 서브섹션 - 일러스트 */
+/* �꽌釉뚯꽮�뀡 - �씪�윭�뒪�듃 */
 .subwrap .ai{
   position: absolute;
   left: 0;
@@ -818,7 +820,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
   background-position: center;
   background-repeat: no-repeat;
 }
-    /* 서브섹션 - 일러스트 미디어쿼리 */
+    /* �꽌釉뚯꽮�뀡 - �씪�윭�뒪�듃 誘몃뵒�뼱荑쇰━ */
   @media all and (min-width:64.063rem) {
     .subwrap .ai-mobile {display:none}
   }
@@ -849,7 +851,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
     #contact3.subwrap .ai-mobile {right:-42%}
   }
 
-/* 눈부신 생산품들, 구경해 보시겠어요? */
+/* �늿遺��떊 �깮�궛�뭹�뱾, 援ш꼍�빐 蹂댁떆寃좎뼱�슂? */
 #portfolio3 .sub-body {position:relative}
 #portfolio3 .sub-project {margin-bottom:3rem}
 #portfolio3 .sub-project strong.cont-tit {color:#242424;font-size: 3.125rem; font-weight:bold; letter-spacing: 0;}
@@ -937,7 +939,7 @@ margin-top: calc(10px + 1.3021vw);margin-bottom: calc(25px + 2.8646vw);display: 
 }
 
 
-/*  프로젝트 리스트 */
+/*  �봽濡쒖젥�듃 由ъ뒪�듃 */
 #project-list {width:100%;background-color:#E6EEF8}
 #project-list .section {width:100%;position:relative}
 #project-list .subtop {position: relative;width: 100%;padding-top:10%}
@@ -970,7 +972,7 @@ transition: .3s ease-in-out;
 .project-tab ul li:hover a,
 .project-tab ul li.on a,
 .project-tab .active a {background: #555CF0;border-radius: 1px;border-bottom:1px solid #555CF0;color: #fff;font-weight:bold; }
-/* 미디어 쿼리 */
+/* 誘몃뵒�뼱 荑쇰━ */
 @media all and (max-width:75rem){
     #project-list .subtop .txtarea h2 {font-size:6.250rem}
 }
@@ -990,7 +992,7 @@ transition: .3s ease-in-out;
 }
 
 
-/* 프로젝트 상세보기 */
+/* �봽濡쒖젥�듃 �긽�꽭蹂닿린 */
 .project-detail {overflow-x: hidden;}
 .project-detail .section {margin-bottom:80px;clear:both}
 .project-detail .section:after {content:"";clear:both;display:table}
@@ -1085,7 +1087,7 @@ transition: .3s ease-in-out;
 .mbcwedding #project-view2,
 .mbcwedding #project-view3 .wrap {background-color: #2E2115}
 .series #project-view2,
-.series #project-view3 .wrap, {background-color: #021A2E}
+.series #project-view3 .wrap {background-color: #021A2E}
 .narafire #project-view2,
 .narafire #project-view3 .wrap {background-color: #1C1F27}
 .denve #project-view2,
@@ -1168,7 +1170,7 @@ transition: .3s ease-in-out;
 #project-more .project-more-list .list .image-wrap img {width:100%}
 #project-more .project-more-list .list .list-title {font-size:1rem;display:block;margin-top:15px;font-weight:500}
 */
- /* project-detail 미디어쿼리 */
+ /* project-detail 誘몃뵒�뼱荑쇰━ */
   @media all and (max-width:98.688rem){
     .project-detail .wrap {max-width:100%;margin:0 80px 0}
   }
@@ -1282,7 +1284,7 @@ transition: .3s ease-in-out;
 }
 
 
-/* 준비되어 있습니다. 함께 하실까요 */
+/* 以�鍮꾨릺�뼱 �엳�뒿�땲�떎. �븿猿� �븯�떎源뚯슂 */
 #contact3 .request-btn {display:inline-block;font-size:1.563rem;font-weight:bold;margin-top:5%;position:relative;padding-left:31px}
 #contact3 .request-btn::before {content:"";width:21px;height:8px;display:block;background: url("../images/sub/icon_arrow2.svg") no-repeat;position:absolute;left:0;top:50%;margin-top:-4px}
 
@@ -1290,7 +1292,7 @@ transition: .3s ease-in-out;
     .cont-contact #contact3 .sub-table .txtarea {width:70%}
   }
 
-  /* 프로젝트 의뢰 폼 */
+  /* �봽濡쒖젥�듃 �쓽猶� �뤌 */
 .article-form {position:relative;margin-top:30px;display:none}
 .article-form .wf-form {margin-bottom:30px;display: none}
 .article-form .wf-form,
@@ -1414,7 +1416,7 @@ transition: .3s ease-in-out;
     border: 0;
 }
 
-  /* 프로젝트 의뢰 폼 미디어쿼리 */
+  /* �봽濡쒖젥�듃 �쓽猶� �뤌 誘몃뵒�뼱荑쇰━ */
   @media (max-width:64rem) and (orientation: portrait) {
     .article-form {display:inline-block;margin-top:40px}
     .article-form .wf-form textarea.default {max-width:31.250rem}

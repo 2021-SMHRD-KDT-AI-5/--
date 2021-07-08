@@ -14,17 +14,16 @@ public class SpecDAO extends DAO{
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, spec.getMajor());
-			psmt.setInt(3, spec.getSpecPoint());
-			psmt.setInt(4, spec.getScore());
-			psmt.setInt(5, spec.getToeic());
-			psmt.setString(6, spec.getToeicSpeaking());
-			psmt.setString(7, spec.getOpic());
-			psmt.setInt(8, spec.getForeignLanguage());
-			psmt.setInt(9, spec.getCertificate());
-			psmt.setInt(10, spec.getOverseasExperience());
-			psmt.setInt(11, spec.getIntern());
-			psmt.setInt(12, spec.getAward());
-			psmt.setInt(13, spec.getVolunteer());
+			psmt.setDouble(3, spec.getGrade());
+			psmt.setInt(4, spec.getToeic());
+			psmt.setString(5, spec.getToeicSpeaking());
+			psmt.setString(6, spec.getOpic());
+			psmt.setInt(7, spec.getForeignLanguage());
+			psmt.setInt(8, spec.getCertificate());
+			psmt.setInt(9, spec.getOverseasExperience());
+			psmt.setInt(10, spec.getIntern());
+			psmt.setInt(11, spec.getAward());
+			psmt.setInt(12, spec.getVolunteer());
 
 			cnt = psmt.executeUpdate();
 

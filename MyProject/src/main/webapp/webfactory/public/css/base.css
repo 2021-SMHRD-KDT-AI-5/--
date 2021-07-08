@@ -76,7 +76,8 @@ footer, header, hgroup, menu, nav, section, summary, mark, video, a {font-size:1
 }
 
 /* 인풋 기본 스타일 제거 */
-textarea,input,select,button {-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-border-radius:0;border-radius:0;border:0;line-height:normal}
+/*textarea,input,select,button {-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-border-radius:0;border-radius:0;border:0;line-height:normal}*/
+
   /* input type number 에서 화살표 제거 */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {-webkit-appearance:none;-moz-appearance:none;appearance:none}
