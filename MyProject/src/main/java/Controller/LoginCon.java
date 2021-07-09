@@ -22,7 +22,7 @@ public class LoginCon implements Command{
 		MemberDTO member = dao.login(new MemberDTO(email, pw));
 		
 		if(member != null) {
-			session.setAttribute("email", member.getEmail());
+			session.setAttribute("member", member);
 			moveURL = "webfactory/project.jsp";
 		}else {
 			moveURL = "webfactory/contact.html";

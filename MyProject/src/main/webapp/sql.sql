@@ -16,7 +16,9 @@ CONSTRAINT license_pk PRIMARY KEY(name)
 select * from license;
 
 DROP TABLE license CASCADE CONSTRAINTS; 
-   
+
+insert into license values('금융','펀드투자권유대행인', '펀드의 매매를 권유하거나 투자자문계약, 투자일임계약 또는 신탁계약의 체결을 권유 ','https://license.kofia.or.kr/','제한 없음')
+
 CREATE TABLE spec(
 num NUMBER(10),
 id VARCHAR2(50),
@@ -56,6 +58,8 @@ CONSTRAINT member_pk PRIMARY KEY(email)
 )
 
 DROP TABLE member CASCADE CONSTRAINTS;
+
+select * from member;
 
 CREATE TABLE bbs(
 num NUMBER(6),

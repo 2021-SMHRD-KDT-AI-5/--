@@ -1,3 +1,10 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import= "Model.LicenseDAO"%>
+<%@ page import= "Model.LicenseDTO"%>
+<% MemberDTO member = (MemberDTO)session.getAttribute("member");  %>
+
 <!doctype html>
 <html lang="kr">
 
@@ -137,11 +144,20 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
             <nav>
                 <ul>
                     <li><a href="about.html">자격증</a></li>
-                    <li><a href="project.html">스팩입력</a></li>
-                    <li><a href="contact.html">로그인</a></li>
+                    <li><a href="project.jsp">스팩입력</a></li>
+                    <% if(member != null){ %>
+					<li><a href="../LogoutCon.do">로그아웃</a></li>
+					<% }else{ %>
+					<li><a href="contact.html">로그인</a></li>
+					<%} %>
+                    <li><a href="board.jsp">게시판</a></li>
                 </ul>
             </nav>
-            <a href="tel:051.714.5730" class="header-call" lang="en">051.714.5730</a>
+            <% if(member != null){ %>
+            <span> <%=member.getNickname() %>님 환영합니다. </span>
+            <% }else{ %>
+            <a href="tel:051.714.5730" class="header-call" lang="en">010-6889-3386</a>
+            <%} %>
         </div>
         <div class="demo-3">
             <main class="main main--demo-3">
@@ -221,7 +237,7 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                                 <p>자격증 찾기</p>
                             </h3>
                         </div>
-                        <button class="main-button sub-button sub-button1 xalign" data-animate-effect="fadeInUp" type="button" onclick="location.href='/about#secondPage' ">
+                        <button class="main-button sub-button sub-button1 xalign" data-animate-effect="fadeInUp" type="button" onclick="location.href='about.jsp#secondPage' ">
                             <span class="text xalign">start</span>
                             <span class="arrow xalign updown"><img src="public/images/sub/icon_arrow1.svg" alt="화살"></span>
                             <span class="gooey"></span>
@@ -245,29 +261,26 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                     <div class="sub-table">
                         <div class="txtarea yalign">
                             <span class="sect-tit1" lang="en">CHECK</span>
-                            <h1 class="sect-tit2">자격증 정보</h1>
+                            <h1 class="sect-tit2" style="margin-bottom: 0px;" >자격증 정보</h1>
                             <div class="sect-txt">
-                                <form action="" autocomplete="on">
+                                <form action="../LicenseCon.do" method="post" autocomplete="on">
                                     <div style="font-size: 20px; padding-bottom: 50px; background: transparent; word-spacing:20px;">
-
-                                        <input type="radio" name="check" > 금융 
-                                        <input type="radio" name="check" > 은행
-                                        <input type="radio" name="check" > 보험
-                                        <input type="radio" name="check" > 디지털
-                                    </div>
-                                        
+                                        <input type="radio" value="금융" name="field" > 금융 
+                                        <input type="radio" value="은행" name="field" > 은행
+                                        <input type="radio" value="보험" name="field" > 보험
+                                        <input type="radio" value="디지털" name="field" > 디지털
+                                    </div>                                      
                                         <div id=div1 autocomplete="on">
-                                        <input id="autoComplete" autocomplete="on" type="text" name="license" style="margin-bottom: 20px;"><br>
-                
+                                        <input id="autoComplete" autocomplete="on" type="text" name="license" style="margin-bottom: 5%;"><br>             
                                         </div>
                         
                                     <label><button id="btn1" type="button" style=" font-size: 20px; color: grey; ">추가 +</button></label>
-                
-                                <button class="main-button sub-button sub-button2" onclick="location.href='/about#4thpage' ">
-                                <span class="text xalign">continue</span>
-                                <span class="arrow xalign updown"><img src="public/images/sub/icon_arrow1.svg" alt="화살"></span>
-                                <span class="gooey"></span>
-                                </button>
+                                		<button  type = "submit" class="main-button sub-button sub-button2" style="margin-top: 40%;">
+                               			<span class="text xalign">결과보기</span>
+                                		<span class="arrow xalign updown"><img src="public/images/sub/icon_arrow1.svg" alt="화살"></span>
+                                		<span class="gooey"></span>
+                                		</button>
+
                             </form>     
                             </div>
                             
@@ -308,11 +321,13 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                     <div class="sub-headline">
 
                         <!-- 결과 head -->
+ 
                         <div class="sub-text">
                             <h2 class="stit" lang="en" style=" color:rgba(0, 0, 0, 0.596); font-size : 50px;">[ 결과보기 ]</h2> <br>
-                            <p style="font-size: 20px;"> ○○권에서 선호하는 자격증입니다.</p> <br>
-                            <p style="font-size: 20px;"> ○○권 자격증 취득률 87%   당신의 꿈을 응원합니다!</p> 
+                            <p style="font-size: 20px;"> <%= request.getAttribute("field") %>권에서 선호하는 자격증입니다.</p> <br>
+                            <p style="font-size: 20px;"> 당신의 꿈을 응원합니다!</p> 
                         </div>           
+                        
                         
                         <!-- 자격증 정보 1 -->
                         <div style="margin-top: 300px; margin-right: 150px;">
@@ -321,10 +336,10 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                                 <div id="comp-il9my3zy2" class="_2bafp" data-testid="richTextElement" style=" margin-bottom: 40px; margin-top: 25px;">
                                     <h3 class="font_3" style="font-size:30px;">AFPK</h3>
                                 </div>                            
-                                <div id="comp-is5s14p6" class="_2bafp" data-testid="richTextElement">
-                                    <p class="font_8" style="color:gray; line-height:0.1em;font-size:18px">재무설계업무에 관한 서비스를 제공할 수 있는 전문성과</p>
-                                    <p class="font_8" style="color:gray; line-height:0.1em;font-size:18px">고객의 이익을 우선으로 하는 윤리성에 대한 자격 평가</p>
-                                    <p class="font_8" style="line-height:2em;font-size:18px"> 자격 요건 _ AFPK 교육과정을 수료</p>
+                                <div id="comp-is5s14p6" class="_2bafp" data-testid="richTextElement" style="width:400px; height:150px;">
+                                    <div class="font_8"><p style="font-size:18px; color:gray; ">재무설계업무에 관한 서비스를 제공할 수 있는 전문성과
+                                    고객의 이익을 우선으로 하는 윤리성에 대한 자격 평가</p></div>
+                                    <p class="font_8" style="line-height:em;font-size:18px"> 자격 요건 _ AFPK 교육과정을 수료</p>
                                 </div>
                                 <a href="https://www.naver.com" class="btn-pr">접수처 바로가기<img src="public/images/common/arrow-up2.svg" alt="화살" class="updown svg"></a>    
                             </div>
@@ -336,12 +351,11 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                             <div style="border: 5px solid white; padding: 0 30px 30px 30px;">
                                 <div id="comp-il9my3zy2" class="_2bafp" data-testid="richTextElement" style=" margin-bottom: 40px; margin-top: 25px;">
                                     <h3 class="font_3" style="font-size:30px;">AFPK</h3>
-                                </div>
-                            
-                                <div id="comp-is5s14p6" class="_2bafp" data-testid="richTextElement">
-                                    <p class="font_8" style="color:gray; line-height:0.1em;font-size:18px">재무설계업무에 관한 서비스를 제공할 수 있는 전문성과</p>
-                                    <p class="font_8" style="color:gray; line-height:0.1em;font-size:18px">고객의 이익을 우선으로 하는 윤리성에 대한 자격 평가</p>
-                                    <p class="font_8" style="line-height:2em;font-size:18px"> 자격 요건 _ AFPK 교육과정을 수료</p>
+                                </div>                            
+                                <div id="comp-is5s14p6" class="_2bafp" data-testid="richTextElement" style="width:400px; height:150px;">
+                                    <div class="font_8"><p style="font-size:18px; color:gray; ">재무설계업무에 관한 서비스를 제공할 수 있는 전문성과
+                                    고객의 이익을 우선으로 하는 윤리성에 대한 자격 평가</p></div>
+                                    <p class="font_8" style="line-height:em;font-size:18px"> 자격 요건 _ AFPK 교육과정을 수료</p>
                                 </div>
                                 <a href="https://www.naver.com" class="btn-pr">접수처 바로가기<img src="public/images/common/arrow-up2.svg" alt="화살" class="updown svg"></a>    
                             </div>
@@ -352,19 +366,16 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                             <div><h3 class="font_3" style="font-size:70px; color: rgb(187, 154, 111);">03</h3></div><br>
                             <div style="border: 5px solid white; padding: 0 30px 30px 30px;">
                                 <div id="comp-il9my3zy2" class="_2bafp" data-testid="richTextElement" style=" margin-bottom: 40px; margin-top: 25px;">
-                                    <h3 class="font_3" style="font-size:30px;">공인재무분석가(CFA Level2)
-                                    </h3>
-                                </div>
-                            
-                                <div id="comp-is5s14p6" class="_2bafp" data-testid="richTextElement">
-                                    <p class="font_8" style="color:gray; line-height:0.1em;font-size:18px">재무설계업무에 관한 서비스를 제공할 수 있는 전문성과</p>
-                                    <p class="font_8" style="color:gray; line-height:0.1em;font-size:18px">고객의 이익을 우선으로 하는 윤리성에 대한 자격 평가</p>
-                                    <p class="font_8" style="line-height:2em;font-size:18px"> 자격 요건 _ Level1합격, L4년제대학졸업  </p>
+                                    <h3 class="font_3" style="font-size:30px;">AFPK</h3>
+                                </div>                            
+                                <div id="comp-is5s14p6" class="_2bafp" data-testid="richTextElement" style="width:400px; height:150px;">
+                                    <div class="font_8"><p style="font-size:18px; color:gray; ">재무설계업무에 관한 서비스를 제공할 수 있는 전문성과
+                                    고객의 이익을 우선으로 하는 윤리성에 대한 자격 평가</p></div>
+                                    <p class="font_8" style="line-height:em;font-size:18px"> 자격 요건 _ AFPK 교육과정을 수료</p>
                                 </div>
                                 <a href="https://www.naver.com" class="btn-pr">접수처 바로가기<img src="public/images/common/arrow-up2.svg" alt="화살" class="updown svg"></a>    
                             </div>
                         </div>
-                    </div>
                     
                     <div class="blob">
                         <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
@@ -411,8 +422,9 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
     
     $('#btn1').click(function(){   
         let data = $('#autoComplete').val();
-        alert(data);
-        $('#div1').append("<div class ='autoComplete_wrapper' style='margin-bottom : 20px'><input autofocus id='autoComplete' autocomplete='on' type='text' name='license'  placeholder="+data+"></div><br>");
+        $('#autoComplete').val("");
+        $('#div1').append("<div class ='autoComplete_wrapper' style='margin-bottom : 20px'><input autofocus id='autoComplete' autocomplete='on' type='text' name='license'  value="+data+" readonly='readonly'></div><br>");
+        
         
    })
 </script>

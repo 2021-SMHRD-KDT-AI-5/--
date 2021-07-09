@@ -1,3 +1,7 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% MemberDTO member = (MemberDTO)session.getAttribute("member");  %>
 <!doctype html>
 <html lang="kr">
 
@@ -84,7 +88,7 @@
 <div id="header">
 	<div class="header-in">
 		<h1 class="logoarea">
-			<a href="index.html">
+			<a href="index.jsp">
 				<svg version="1.1" id="logo" class="xyalign" xmlns="http://www.w3.org/2000/svg">
 					<g>
 						<path fill="#7723C8" d="M24.3,25.6l-6.3,3.1c-0.8,0.4-2.1,0.4-3.5,0.1c0,0-1.7-0.5-2.9-1.7c-1-1-1.2-1.1-2.8-2.1l0,0
@@ -110,11 +114,20 @@
                 <ul>
                     <li><a href="about.html">자격증</a></li>
                     <li><a href="project.jsp">스팩입력</a></li>
-                    <li><a href="contact.html">로그인</a></li>
+                    <% if(member != null){ %>
+					<li><a href="../LogoutCon.do">로그아웃</a></li>
+					<% }else{ %>
+					<li><a href="contact.jsp">로그인</a></li>
+					<%} %>
                     <li><a href="board.jsp">게시판</a></li>
+
                 </ul>
             </nav>
-            <a href="tel:051.714.5730" class="header-call" lang="en">선일정보통신</a>
+            <% if(member != null){ %>
+            <span> <%=member.getNickname() %>님 환영합니다. </span>
+            <% }else{ %>
+            <a href="tel:051.714.5730" class="header-call" lang="en">010-6889-3386</a>
+            <%} %>
         </div>
         <div class="demo-3">
             <main class="main main--demo-3">
@@ -150,13 +163,13 @@
                                 <span>소</span>
                                 <span>개</span>
                             </a>
-                            <a class="global-menu__item global-menu__item--demo-3 popout" href="project.html">
+                            <a class="global-menu__item global-menu__item--demo-3 popout" href="project.jsp">
                                 <span>프</span>
                                 <span>로</span>
                                 <span>젝</span>
                                 <span>트</span>
                             </a>
-                            <a class="global-menu__item global-menu__item--demo-3 popout" href="contact.html">
+                            <a class="global-menu__item global-menu__item--demo-3 popout" href="contact.jsp">
                                 <span>문</span>
                                 <span>의</span>
                                 <span>하</span>
@@ -287,6 +300,7 @@
         </div>-->
         <!-- 메인1. 더_____하다 -->        
         <div class="slide AnimateWrap">
+        
             <div id="main1" class="mainwrap">
                 <div class="main-body">
                     <div class="main-headline">

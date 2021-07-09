@@ -32,7 +32,7 @@ public class MemberDAO extends DAO{
 		MemberDTO member = null;
 		
 		try {
-			String sql = "SELECT email,pw FROM member WHERE email=? AND pw=?";
+			String sql = "SELECT * FROM member WHERE email=? AND pw=?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, loginMember.getEmail());
 			psmt.setString(2, loginMember.getPw());
