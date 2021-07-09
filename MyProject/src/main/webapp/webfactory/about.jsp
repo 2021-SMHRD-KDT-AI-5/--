@@ -253,7 +253,7 @@ ascript" src="public/jquery/basic/jquery.cycle.all.js"></script>
                             <span class="sect-tit1" lang="en">CHECK</span>
                             <h1 class="sect-tit2" style="margin-bottom: 0px;" >자격증 정보</h1>
                             <div class="sect-txt">
-                                <form action="LicenseCon" method="post" autocomplete="on">
+                                <form action="../LicenseCon.do" method="post" autocomplete="on">
                                     <div style="font-size: 20px; padding-bottom: 50px; background: transparent; word-spacing:20px;">
                                         <input type="radio" name="check" > 금융 
                                         <input type="radio" name="check" > 은행
