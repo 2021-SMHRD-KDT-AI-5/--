@@ -32,7 +32,7 @@ public class LicenseCon implements Command{
 			System.out.println(license[0]);
 			System.out.println(license[1]);
 			System.out.println(license[2]);
-			
+			request.setAttribute("field", field);
 			
 			String name = null;
 			for(int i =0; i<license.length; i++) {
