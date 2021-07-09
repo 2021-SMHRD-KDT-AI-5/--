@@ -27,9 +27,9 @@ public class joinCon implements Command{
 		int cnt = dao.join(member);
 		
 		if(cnt > 0) {
-			moveURL = "webfactory/contact.html";
+			moveURL = "webfactory/contact.jsp";
 		}else {
-			moveURL = "webfactory/contact.html";
+			moveURL = "webfactory/contact.jsp";
 		}
 
 	return moveURL;

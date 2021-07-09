@@ -12,7 +12,7 @@ public class LogountCon implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String moveURL = "webfactory/contact.html";
+		String moveURL = "webfactory/contact.jsp";
 		HttpSession session = request.getSession();
 		session.invalidate();
 		return moveURL;

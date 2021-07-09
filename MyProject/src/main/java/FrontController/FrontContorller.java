@@ -36,7 +36,7 @@ public class FrontContorller extends HttpServlet {
 			command = new joinCon();
 		}else if(resultURI.equals("bbsCon.do")) {
 			command = new bbsCon();
-		}else if(resultURI.equals("Logout.do")) {
+		}else if(resultURI.equals("LogoutCon.do")) {
 			command = new LogountCon();
 		}else if(resultURI.equals("LicenseCon.do")) {
 			command = new LicenseCon();

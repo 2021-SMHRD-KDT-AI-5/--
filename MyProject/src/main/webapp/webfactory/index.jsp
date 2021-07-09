@@ -112,7 +112,7 @@
         <div class="header-mid">
             <nav>
                 <ul>
-                    <li><a href="about.html">자격증</a></li>
+                    <li><a href="about.jsp">자격증</a></li>
                     <li><a href="project.jsp">스팩입력</a></li>
                     <% if(member != null){ %>
 					<li><a href="../LogoutCon.do">로그아웃</a></li>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="global-menu">
                         <div class="global-menu__wra demo-mohe">
-                            <a class="global-menu__item global-menu__item--demo-3 popout" href="about.html">
+                            <a class="global-menu__item global-menu__item--demo-3 popout" href="about.jsp">
                                 <span>회</span>
                                 <span>사</span>
                                 <span>소</span>
@@ -326,7 +326,7 @@
                             <span class="main1-oject6 main-object"><img src="public/images/main/vs1_5.svg" alt=""></span>
                         </div>
                         <!-- 메인1 스타트 버튼 -->
-                        <button class="main-button main1-start-button xalign" onclick="location.href='project.html' ">
+                        <button class="main-button main1-start-button xalign" onclick="location.href='project.jsp' ">
                             <span class="text xyalign" lang="en">start</span>
                             <span class="gooey"></span>
                         </button>
@@ -344,7 +344,7 @@
                     </div>
                     <span class="main-cht xyalign"><img src="public/images/main/vs2.svg" alt=""></span>
 					<p class="main-subtext xalign">당신의 취업을 응원합니다.<br />여기는 선일정보통신 입니다.</p>
-					<button class="start-link-button" type="button" onclick="location.href='project.html' ">
+					<button class="start-link-button" type="button" onclick="location.href='project.jsp' ">
                         <span class="start-link-icon">
                             <span class="text" lang="en">start</span>
                             <span class="btn-arrow"><img src="public/images/common/arrow1.svg" alt=""></span>
@@ -376,7 +376,7 @@
 					</div>
 					<span class="main-cht xyalign"><img src="public/images/main/vs3.svg" alt=""></span>
                     <p class="main-subtext xalign">걱정없이 만들어 드리겠습니다.<br />당신이 준비한 스펙이 회사에 맞을까요?.</p>
-                    <button class="start-link-button" type="button" onclick="location.href='project.html' ">
+                    <button class="start-link-button" type="button" onclick="location.href='project.jsp' ">
                         <span class="start-link-icon">
                             <span class="text" lang="en">start</span>
                             <span class="btn-arrow"><img src="public/images/common/arrow1.svg" alt=""></span>
@@ -408,7 +408,7 @@
 					<span class="main-cht xyalign"><img src="public/images/main/vs4.svg" alt=""></span>
 					<span class="main-cht main-cht2 xyalign"><img src="public/images/main/vs4_1.svg" alt=""></span>                        
                     <p class="main-subtext xalign">지금 시작하시겠습니까?<br >당신은 스펙만 입력하세요.</p>
-                    <button class="start-link-button" onclick="location.href='project.html' ">
+                    <button class="start-link-button" onclick="location.href='project.jsp' ">
                         <span class="start-link-icon">
                             <span class="text" lang="en">start</span>
                             <span class="btn-arrow"><img src="public/images/common/arrow1.svg" alt=""></span>
@@ -438,7 +438,7 @@
 					</div>
 					<span class="main-cht xalign""><img src="public/images/main/vs5.svg" alt=""></span>
                     <p class="main-subtext xalign">당신의 취업을 앞당기겠습니다.<br />우리는 선일정보통신이니까요.</p>
-                    <button class="start-link-button" type="button" onclick="location.href='project.html' ">
+                    <button class="start-link-button" type="button" onclick="location.href='project.jsp' ">
                         <span class="start-link-icon">
                             <span class="text" lang="en">start</span>
                             <span class="btn-arrow"><img src="public/images/common/arrow1.svg" alt=""></span>

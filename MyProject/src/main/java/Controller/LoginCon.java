@@ -25,7 +25,7 @@ public class LoginCon implements Command{
 			session.setAttribute("member", member);
 			moveURL = "webfactory/project.jsp";
 		}else {
-			moveURL = "webfactory/contact.html";
+			moveURL = "webfactory/contact.jsp";
 		}
 
 		return moveURL;

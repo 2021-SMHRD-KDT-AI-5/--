@@ -23,30 +23,22 @@ public class LicenseCon implements Command{
 			String field = request.getParameter("field");
 			String[] license = request.getParameterValues("license");
 			
-			request.setAttribute("field", field);
-			
 			LicenseDTO dto = null;
 			LicenseDAO dao = new LicenseDAO();
 			
-			System.out.println(field);
-			System.out.println(license[0]);
-			System.out.println(license[1]);
-			System.out.println(license[2]);
-			request.setAttribute("field", field);
-			
-			String name = null;
-			for(int i =0; i<license.length; i++) {
-				name += "'"+license[i]+"'";
+			String names = null;
+			for(int i = 0; i<license.length; i++) {
+				names += "'"+license[i]+"'";
 			}
 					
-			ArrayList<LicenseDTO> list = dao.select(field, name);
+			ArrayList<LicenseDTO> licenseList = dao.select(field, names);
 			
-			if (list != null) {
-				session.setAttribute("list", list);
+			if (licenseList != null) {
+				session.setAttribute("licenseList", licenseList);
 				
-				moveURL = "webfactory/about.jsp";
+				moveURL = "webfactory/about.jsp#3rdPage";
 			}else {
-				moveURL = "webfactory/contact.html";
+				moveURL = "webfactory/about.jsp#secondPage";
 			}	
 			return moveURL;
 		}

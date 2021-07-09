@@ -183,7 +183,7 @@ appearance: none;
         <div class="header-mid">
             <nav>
                 <ul>
-                    <li><a href="about.html">자격증</a></li>
+                    <li><a href="about.jsp">자격증</a></li>
                     <li><a href="project.jsp">스팩입력</a></li>
                     <% if(member != null){ %>
 					<li><a href="../LogoutCon.do">로그아웃</a></li>
@@ -227,7 +227,7 @@ appearance: none;
                     </div>
                     <div class="global-menu">
                         <div class="global-menu__wra demo-mohe">
-                            <a class="global-menu__item global-menu__item--demo-3 popout" href="about.html">
+                            <a class="global-menu__item global-menu__item--demo-3 popout" href="about.jsp">
                                 <span>회</span>
                                 <span>사</span>
                                 <span>소</span>
