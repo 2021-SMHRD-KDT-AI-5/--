@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Command.Command;
+import Controller.LicenseCon;
 import Controller.LoginCon;
 import Controller.bbsCon;
 import Controller.joinCon;
@@ -34,6 +35,8 @@ public class FrontContorller extends HttpServlet {
 			command = new joinCon();
 		}else if(resultURI.equals("bbsCon.do")) {
 			command = new bbsCon();
+		}else if(resultURI.equals("LicenseCon.do")) {
+			command = new LicenseCon();
 		}
 		
 		String moveURL = command.execute(request, response);
