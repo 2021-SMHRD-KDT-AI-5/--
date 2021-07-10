@@ -1,0 +1,208 @@
+/* 웹제작소 portfolio.css */
+html,body {padding:0;margin:0}
+.layout {width:94%;max-width:1440px;margin:0 auto;position:relative}
+.layout::after {content:"";display:table;clear:both}
+
+#portfolio {background-color:#E6EEF8}
+
+.subtop {position: relative;width: 100%;padding-top:10%}
+.subtop .txtarea {width:100%;text-align:center}
+.subtop .txtarea h2 {color:#242424;font-size:8.750rem;line-height: 1.2; font-weight:bold;margin-bottom: 1.25rem;}
+.subtop .txtarea p {color: #444;font-size: 1.25rem;line-height: 1.4;font-weight: 300}
+
+#content{min-height:500px;padding:140px 0}
+#content:after {content:"";display:table;clear:both}
+
+/* 미디어 쿼리 */
+@media all and (max-width:75rem){
+    .subtop .txtarea h2 {font-size:6.250rem}
+}
+@media all and (max-width:64rem){
+    #content{padding:5rem 0 3rem}
+    .subtop {padding-top:15%}
+    .subtop .txtarea h2 {font-size:4.375rem}
+}
+@media all and (max-width:40rem){
+    #content{padding:3rem 0}
+    .subtop {padding-top:30%}
+    .subtop .txtarea h2 {font-size:2.188rem}
+    .subtop .txtarea p {font-size:1rem}
+}
+
+/* tabs */
+.tabs #tab-1, #tab-2, #tab-3,#tab-4, #tab-5{width:100%;margin-top:3.750rem}
+.tabs ul {width:100%;    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;margin:0 auto}
+.tabs ul::after{content:"";display:block;clear:both}
+
+.tabs ul li {display:flex;justify-content:center;align-items:center}
+.tabs ul li:first-child {margin-left:0}
+.tabs ul li a {
+	display: block;
+	padding: 13px 30px;
+	text-decoration: none;
+	color: #444444;
+    font-size: 18px;
+    font-weight:500
+}
+.tabs ul li:hover a,
+.tabs ul li.on a,
+.tabs .active a {background: #555CF0;border-radius: 1px;color: #fff;font-weight:bold}
+
+#portfolio .boxlist {margin: 0 -2px;}
+#portfolio .box {box-sizing:border-box;position: relative;float: left;width: 33.33%;padding: 2px}
+#portfolio .box .boxwrap {position: relative;}
+#portfolio .box .imgarea {width:100%;max-width:719px;overflow: hidden;display: table;}
+#portfolio .box .imgarea img {width:100%;height:auto}
+#portfolio .box .overlay {
+	-webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+#portfolio .box:hover .overlay {background: rgba(0,0,0,0.7); transform: scale(1,1);transition: all 0.5s ease;z-index:1}
+#portfolio .box .overlay .lightbox {width:90%;margin:0 auto;display: none;text-align: center}
+#portfolio .box .overlay .lightbox .txtbox {
+	transform: scale(0, 0);
+	-webkit-transform: scale(0, 0);
+	-moz-transform: scale(0, 0);
+	-ms-transform: scale(0, 0);
+	-o-transform: scale(0, 0);
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+#portfolio .box:hover .overlay .lightbox .txtbox {
+	-webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+#portfolio .box:hover .overlay .lightbox {display: block;}
+#portfolio .box .overlay .lightbox strong {display: block;color: #fff;font-size: 35px;line-height:1.2;font-weight: 500}
+#portfolio .box .overlay .lightbox .btnarea {display: table;margin: 40px auto 0}
+#portfolio .box .overlay .lightbox .btn2 {float:left;display: block;margin: 0 5px;padding: 11px 22px;border:1px solid rgba(255,255,255,0.6);font-weight: 500;color: #fff;}
+#portfolio .box .overlay .lightbox .btn2 i {display: inline-block;vertical-align: middle;margin-left: 10px;margin-top: -5px;}
+#portfolio .box .overlay .lightbox .btn2:hover .svg { 
+	transform: rotate3d(0, 0, 1, 0deg);
+	-webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-animation-name: swing;
+	animation-name: swing;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+ }
+#portfolio .box .overlay .lightbox .btn2:first-child .svg path{stroke:#fff;}
+#portfolio .box .overlay .lightbox .btn2 .svg path{stroke:#fff;}
+#portfolio .box span {position: absolute;bottom: 20px;left: 20px;color: #fff;font-size: 18px;font-weight: bold}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@media all and (max-width:1024px) {
+    #portfolio .box {width:50%}
+}
+@media all and (max-width:640px) {
+    .tabs #tab-1, #tab-2, #tab-3, #tab-4, #tab-5 {margin-top:2.5rem}
+    .tabs ul li a {font-size:16px;padding:10px 15px}
+
+    #portfolio .box .overlay .lightbox strong {font-size: 20px;line-height:1.2}
+    #portfolio .box span {font-size:15px;left:10px;bottom:10px;font-weight:500}
+    #portfolio .box .overlay .lightbox .btnarea {margin-top:20px}
+    #portfolio .box .overlay .lightbox .btn2 {font-size:13px;padding:7px 10px;margin:0 2px;border-width:2px}
+    #portfolio .box .overlay .lightbox .btn2 i {display:none}
+
+    .tabs ul li a {
+        display: block;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: #444444;
+        font-size: 16px;
+    }
+    
+}
+#portfolio #project-more {margin-top:80px}
+/* 포트폴리오 상세*/
+#svisual,
+#svisual2 {width:100%;overflow-x: hidden;}
+#svisual img,
+#svisual2 img {width:100%}
+
+/* go_top */
+.action_top {
+    position: fixed;
+    bottom: 20px;
+    right: 190px;
+    z-index: 600;
+    opacity:0
+    }
+    .action_top.show {
+        opacity: 1;
+    }
+    .action_top i {}
