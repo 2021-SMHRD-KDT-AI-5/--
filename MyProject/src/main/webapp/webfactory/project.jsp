@@ -1,7 +1,9 @@
+<%@page import="java.net.URLDecoder"%>
+<%@page import="java.net.URLEncoder"%>
 <%@page import="Model.MemberDTO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% MemberDTO member = (MemberDTO)session.getAttribute("member");  %>
+
 <!doctype html>
 <html lang="kr">
 
@@ -10,6 +12,7 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="../www.googletagmanager.com/gtag/jse15e?id=UA-170631814-1"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -17,6 +20,7 @@
   gtag('config', 'UA-170631814-1');
   gtag('config', 'AW-621077866');
 </script>
+
 <meta charset="utf-8">
 <title>프로젝트 / 웹제작소</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
@@ -80,6 +84,81 @@
 </script>
 
 <style type="text/css">
+    
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+    
+.result_div {
+   width: 50%;
+    }    
+    
+.result_table{
+    border: solid;
+    border-color: #fff;
+    margin-top: 60px;
+    }    
+    
+.result_table td{
+  
+  width: auto;
+  border: solid;
+  border-color: #fff;
+  color: #669;
+  font-size: 10px;
+  padding-right: 20px;
+        
+    }
+.result_table th{
+  width: auto;
+  color: #168;
+  text-align: center;
+  font-size: 30px;
+  padding-right: 20px;
+
+    }
+    
+.result_table tr{
+        
+    }
+.comapny_name{
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px;
+    padding-top: 10px;
+
+    }
+.comapny_col{
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px;
+    padding-top: 20px;
+
+    }
+.comapny_pred{
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px; 
+    padding-top: 20px;
+
+    }
+.comapny_des{
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px; 
+    padding-top: 20px;
+    }
 
 /*project.jsp용 스타일 코드*/
 .input-box{position: relative; float: left; padding-right: 10px; padding-bottom: 10px;}
@@ -98,7 +177,21 @@ input:placeholder-shown + label{ color:#000000; font-size:14pt; top:15px; }
 input:focus + label, label{ color:#8aa1a1; font-size:10pt; pointer-events: none; position: absolute; left:0px; top:0px; transition: all 0.2s ease ; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; }
 input:focus, input:not(:placeholder-shown){ border-bottom: solid 1px #8aa1a1; outline:none; }
 
+.bubu {
+    position: absolute;
+    height: 600px;
+    width: 15%;
+    margin-top: 50px;
+    margin-right: 15px;
+    box-shadow: 0 0 10px 3px rgba(100, 100, 100, 0.7);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    padding-top: 10px;
+}
 
+    
+    
 .input-box2 > .select1{
 float: left;
 width: 100px;
@@ -111,6 +204,7 @@ background: url('arrow.jpg') no-repeat 95% 50%;
 -moz-appearance: none;
 appearance: none;
 }
+
 
 .button_sb2{
   position: absolute; bottom: -50%;  left: 30%;
@@ -315,7 +409,7 @@ appearance: none;
                             <p class="sect-txt"></p>
                             
                             <!--스팩입력창-->
-                            <form class = "input_form" action="specCon" method="POST"> 
+                            <form class = "input_form" action="../specCon.do" method="POST"> 
                             
                             <div class="input-box"> 
                                 <input id="Major" type="text" name="Major" placeholder="출신전공" tabindex="5">
@@ -443,15 +537,182 @@ appearance: none;
             </div><!-- //// about --->
         </div>
     </div>
+    
     <div class="section section3" id="section3">
         <div id="portfolio3" class="subwrap">
             <div class="sub-body">
-                <div class="slider">
-                    <div class="sub-project">
-                        <strong class="cont-tit">결과</strong>
+                <div class="slider" style="top: 0%">
+                    <div class="sub-project" style="margin-top: 10%">
+                        <strong class="cont-tit"></strong>
+
                     </div>
+                    <div>
+                        <h2>
+                            <img src="./views/project/output/images/result/com_result.png" alt="">
+                             
+                        </h2>
+
+                      <div class="show1">
+                            <div style=" margin-left: 0%;padding: 0px" class="bubu">
+                            	<!--회사 이미지-->
+                               <img src="./views/project/output/images/result/taro1.png" alt="" style="width: 100%; height: 100%" >
+                                <!--회사소개-->
+                       </div>
+                      </div>
+                     <div class="show2">
+                     <%  //String score = URLDecoder.decode(request.getParameter("score")); %>
+                     <%
+                     	// URLEncoder.encode(
+                     	String score = request.getParameter("score");
+                     	String indus = request.getParameter("indus");
+                     	String dept = request.getParameter("dept");
+                     %> 
+                     
+                       <div style="margin-left: 0%" class="bubu">
+                           <div>
+                              <!--회사 이미지-->
+                               <img src="./views/project/output/images/result/sam_card.jpg" alt="" style="width: 100%; height: 30%" >
+                                <!--회사소개-->
+                               <div class="company_info">
+                                   
+                                   <div class="comapny_name">
+                                       <span>회사명 : 삼성카드 <%=indus %></span>
+                                   </div>
+                                   <div class="comapny_col">
+                                       <span>부서명 : 물류 운송 배송 <%=dept %></span>
+                                   </div>
+                                   <div class="comapny_pred">
+                                       <span>예측률 : 96.4% <%=score %></span>
+                                   </div>
+                                   <div class="comapny_des">
+                                       <span>홈페이지 : www.samsungcard.com</span>
+                                   </div>
+                               </div>
+                               
+                               
+                           </div>
+                           
+                       </div>
+                        </div>
+                         <div class="show3">
+                           <div style="margin-left: 20%;padding: 0px" class="bubu">
+                              <!--회사 이미지-->
+                               <img src="./views/project/output/images/result/taro2.png" alt="" style="width: 100%; height: 100%" >
+                                <!--회사소개-->
+
+                           
+                       </div>
+                      </div>
+
+                        
+                        <div class="show4">
+                       <div style="margin-left: 20%" class="bubu">
+                              <div>
+                              <!--회사 이미지-->
+                                 <img src="./views/project/output/images/result/sam_elec.jpg" alt="" style="width: 100%; height: 30%" >
+                                <!--회사소개-->
+                               <div class="company_info">
+                                   
+                                   <div class="comapny_name">
+                                       <span>회사명 : 삼성전자</span>
+                                   </div>
+                                   <div class="comapny_col">
+                                       <span>부서명 : 유통 물류 재고</span>
+                                   </div>
+                                   <div class="comapny_pred">
+                                       <span>예측률 : 84.1%</span>
+                                   </div>
+                                   <div class="comapny_des">
+                                       <span>홈페이지 : www.samsung.com</span>
+                                       
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                        </div>
+
+                         <div class="show5">
+                           <div style="margin-left: 40%;padding: 0px" class="bubu">
+                              <!--회사 이미지-->
+                               <img src="./views/project/output/images/result/taro3.png" alt="" style="width: 100%; height: 100%" >
+                                <!--회사소개-->
+
+                           
+                       </div>
+                      </div>
+                      
+                       
+                        <div class="show6">
+                       <div style="margin-left: 40%" class="bubu">
+                           <div>
+                              <!--회사 이미지-->
+                               <img src="./views/project/output/images/result/LG.jpg" alt="" style="width: 100%; height: 30%" >
+                                <!--회사소개-->
+                               <div class="company_info">
+                                   
+                                   <div class="comapny_name">
+                                       <span>회사명 : LG전자</span>
+                                   </div>
+                                   <div class="comapny_col">
+                                       <span>부서명 : 생산 제조 설비 조립</span>
+                                   </div>
+                                   <div class="comapny_pred">
+                                       <span>예측률 : 81.7%</span>
+                                   </div>
+                                   <div class="comapny_des">
+                                       <span>홈페이지 : www.lge.co.kr </span>
+                                       
+                                   </div>
+                               </div>
+                               
+                               
+                           </div>
+                           
+                       </div>
+                        </div>
+                        
+                         <div class="show7">
+                           <div style="margin-left: 60%;padding: 0px" class="bubu">
+                              <!--회사 이미지-->
+                               <img src="./views/project/output/images/result/taro4.png" alt="" style="width: 100%; height: 100%" >
+                                <!--회사소개-->
+
+                           
+                       </div>
+                      </div>
+                        <div class="show8">
+                       <div style="margin-left: 60%" class="bubu">
+                           <div>
+                              <!--회사 이미지-->
+                               <img src="./views/project/output/images/result/UNIAS.jpg" alt="" style="width: 100%; height: 30%" >
+                                <!--회사소개-->
+                               <div class="company_info">
+                                   
+                                   <div class="comapny_name">
+                                       <span>회사명 : 유니에스</span>
+                                   </div>
+                                   <div class="comapny_col">
+                                       <span>부서명 : 전기 전자 제어</span>
+                                   </div>
+                                   <div class="comapny_pred">
+                                       <span>예측률 : 73.2%</span>
+                                   </div>
+                                   <div class="comapny_des">
+                                       <span>홈페이지 : www.unies.com</span>
+                                       
+                                   </div>
+                               </div>
+                               
+                               
+                           </div>
+                           
+                       </div>
+                        </div>
+                       </div>
 
                 </div>
+                
+
 
             </div><!-- //// sub-body --->
         </div><!-- //// subwrap --->
@@ -523,6 +784,72 @@ appearance: none;
         ]
     });    
 </script>
+
+<script>
+    $(document).ready(function() {
+    $('.show1').show(); //페이지를 로드할 때 표시할 요소
+    $('.show2').hide(); //페이지를 로드할 때 숨길 요소
+ }); 
+    
+
+    $('.show1').click(function(){
+    $ ('.show1').fadeOut(3000); //클릭 시 첫 번째 요소 숨김
+    $ ('.show2').fadeIn(4000); //클릭 시 두 번째 요소 표시
+
+        return false;
+
+});
+
+</script>
+
+
+<script>
+    $(document).ready(function() {
+    $('.show3').show(); //페이지를 로드할 때 표시할 요소
+    $('.show4').hide(); //페이지를 로드할 때 숨길 요소
+ }); 
+    $('.show3').click(function(){
+    $ ('.show3').fadeOut(3000); //클릭 시 첫 번째 요소 숨김
+    $ ('.show4').fadeIn(4000); //클릭 시 두 번째 요소 표시
+
+        return false;
+
+});
+    
+</script>
+
+<script>
+    $(document).ready(function() {
+    $('.show5').show(); //페이지를 로드할 때 표시할 요소
+    $('.show6').hide(); //페이지를 로드할 때 숨길 요소
+ }); 
+    $('.show5').click(function(){
+    $ ('.show5').fadeOut(3000); //클릭 시 첫 번째 요소 숨김
+    $ ('.show6').fadeIn(4000); //클릭 시 두 번째 요소 표시
+
+        return false;
+
+});
+    
+</script>
+
+<script>
+    $(document).ready(function() {
+    $('.show7').show(); //페이지를 로드할 때 표시할 요소
+    $('.show8').hide(); //페이지를 로드할 때 숨길 요소
+ }); 
+    $('.show7').click(function(){
+    $ ('.show7').fadeOut(3000); //클릭 시 첫 번째 요소 숨김
+    $ ('.show8').fadeIn(4000); //클릭 시 두 번째 요소 표시
+
+        return false;
+
+});
+    
+</script>
+
+
+
 
 <script src='../cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js'></script>
 <script type="text/javascript" src="public/jquery/sub/blobs/script.js"></script><!-- 

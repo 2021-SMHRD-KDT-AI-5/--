@@ -1,21 +1,22 @@
 package Model;
 
 public class SpecDTO {
-	private String major; // Àü°ø
-	private double grade; // ÇÐÁ¡
-	private int toeic; // ÅäÀÍ
-	private String toeicSpeaking; // ÅäÀÍ½ºÇÇÅ·
-	private String opic; // ¿ÀÇÈ -> µî±Þ¼ø(AL, IH, IM3, IM2, IM1, IL, NH, NM, NL)
-	private int foreignLanguage; // ¿Ü±¹¾î(±âÅ¸)
-	private int certificate; // ÀÚ°ÝÁõ
-	private int overseasExperience; // ÇØ¿Ü°æÇè
-	private int intern; // ÀÎÅÏ
-	private int award; // ¼ö»ó³»¿ª
-	private int volunteer; // ±³³»/»çÈ¸/ºÀ»ç
+	private String id;
+	private String major; // ï¿½ï¿½ï¿½ï¿½
+	private double grade; // ï¿½ï¿½ï¿½ï¿½
+	private int toeic; // ï¿½ï¿½ï¿½ï¿½
+	private String toeicSpeaking; // ï¿½ï¿½ï¿½Í½ï¿½ï¿½ï¿½Å·
+	private String opic; // ï¿½ï¿½ï¿½ï¿½ -> ï¿½ï¿½Þ¼ï¿½(AL, IH, IM3, IM2, IM1, IL, NH, NM, NL)
+	private int foreignLanguage; // ï¿½Ü±ï¿½ï¿½ï¿½(ï¿½ï¿½Å¸)
+	private int certificate; // ï¿½Ú°ï¿½ï¿½ï¿½
+	private int overseasExperience; // ï¿½Ø¿Ü°ï¿½ï¿½ï¿½
+	private int intern; // ï¿½ï¿½ï¿½ï¿½
+	private int award; // ï¿½ï¿½ï¿½ó³»¿ï¿½
+	private int volunteer; // ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½È¸/ï¿½ï¿½ï¿½ï¿½
 	
-	public SpecDTO(String major, double grade, int toeic, String toeicSpeaking, String opic,
+	public SpecDTO(String id, String major, double grade, int toeic, String toeicSpeaking, String opic,
 			int foreignLanguage, int certificate, int overseasExperience, int intern, int award, int volunteer) {
-		
+		this.id = id;
 		this.major = major;
 		this.grade = grade;
 		this.toeic = toeic;
@@ -28,7 +29,18 @@ public class SpecDTO {
 		this.award = award;
 		this.volunteer = volunteer;
 	}
-	
+
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
 	public String getMajor() {
 		return major;
 	}

@@ -85,7 +85,6 @@ SELECT * FROM member
 
 SELECT * FROM bbs
 
-
 -- 금융 분야 --
 INSERT INTO license VALUES('금융','펀드투자권유대행인','펀드의 매매를 권유하거나 투자자문계약, 투자일임계약 또는 신탁계약의 체결을 권유 ','금융투자협회 https://license.kofia.or.kr/','제한 없음');
 INSERT INTO license VALUES('금융','펀드투자권유자문인력','투자자를 상대로 파생상품, 파생결합증권 및 법 제4조제7항제1호에 해당하는 증권에 대하여 투자권유 또는 투자자문 업무를 수행','금융투자협회 https://license.kofia.or.kr/','사전교육이수');

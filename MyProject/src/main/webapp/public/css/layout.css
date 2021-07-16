@@ -1,0 +1,224 @@
+/*-- 
+<색상표>
+1. 로고와 햄버거 메뉴
+    메인 1. 더하다  >  #7723c8
+    메인 2. 뚝딱뚝딱, 서브 1. 안녕하세요? > #ed5167
+    메인 3. 척척, 서브2. 궁금하시죠? > #3738cb
+    메인 4. 쏙쏙, 서브3. 함께하실까요? > #ff7e28
+    메인 5. 영차영차 > #000000
+
+    포트폴리오 상세보기 > #1fa3b6
+
+2. 세로로 내려오는 풀메뉴 배경 색상 > 위치  /public/jquery/menu/demo.css
+    메인 1. 더하다 
+        path-fill-1 : #7723c8
+        path-fill-2 : #b77af2
+        path-fill-3 : #f6e8ff
+
+    메인 2. 뚝딱뚝딱, 서브 1. 안녕하세요?
+        path-fill-1 : #ed5167
+        path-fill-2 : #f67587
+        path-fill-3 : #f8e6f3
+
+	메인 3. 척척, 서브2. 궁금하시죠?
+		path-fill-1 : #3738cb
+		path-fill-2 : #84b8ff
+		path-fill-3 : #e6eef8
+	
+	메인 4. 쏙쏙, 서브3. 함께하실까요?
+		path-fill-1 : #ff7e28
+		path-fill-2 : #ffbf63
+		path-fill-3 : #f8f6e6
+
+    메인 5. 영차영차
+		path-fill-1 : #1fa3b6
+		path-fill-2 : #aee6e1
+		path-fill-3 : #e5f8f1
+
+3. 네비게이션 색상
+    메인 2. 뚝딱뚝딱
+        .main-navigation .navi-button .gooey{background-color:#d1b0c5}
+        .main-navigation .navi-button .gooey:before{background-color:#ffc0db}
+        .main-navigation .navi-button .gooey:after{background-color:#f67587}
+        .main-navigation .navi-button .gooey:after{box-shadow: 1px 0 3px #d1b0c5}
+
+        .main-navigation .circle-front {fill:#ffc0db}
+        .main-navigation .circle-shadow {fill:#d1b0c5}
+
+    메인 3. 척척
+        .main-navigation .navi-button .gooey{background-color:#b5bfdb}
+        .main-navigation .navi-button .gooey:before{background-color:#84b8ff}
+        .main-navigation .navi-button .gooey:after{background-color:#1e7dff}
+        .main-navigation .navi-button .gooey:after{box-shadow: 1px 0 3px #b5bfdb}
+        
+        .main-navigation .circle-front {fill:#84b8ff}
+        .main-navigation .circle-shadow {fill:#b5bfdb}
+
+    메인 4. 쏙쏙
+        .main-navigation .navi-button .gooey{background-color:#e2cdb3}
+        .main-navigation .navi-button .gooey:before{background-color:#ffbf63}
+        .main-navigation .navi-button .gooey:after{background-color:#fb913b}
+        .main-navigation .navi-button .gooey:after{box-shadow: 1px 0 3px #e2cdb3}        
+        
+        .main-navigation .circle-front {fill:#ffbf63}
+        .main-navigation .circle-shadow {fill:#e2cdb3}
+
+    메인 5. 영차영차
+        .main-navigation .navi-button .gooey{background-color:#b0d1d1}
+        .main-navigation .navi-button .gooey:before{background-color:#82caeb}
+        .main-navigation .navi-button .gooey:after{background-color:#3ea8d9}
+        .main-navigation .navi-button .gooey:after{box-shadow: 1px 0 3px #b0d1d1}        
+        
+        .main-navigation .circle-front {fill:#82caeb}
+        .main-navigation .circle-shadow {fill:#b0d1d1}
+*/
+
+#header {width:100%;position: absolute;top:0;}
+#header .header-in {width:92.8%;height:auto;margin:0 auto;position:relative;top:2.5rem;}
+#header .header-in h1.logoarea {width:55px;height:53px;position:absolute;left:0;top:0;z-index: 1}
+#header .header-in #logo {width:27px;height:29px;z-index:2}
+#header .header-in #logobg {position:absolute;}
+
+.header-mid {position:absolute;top:20px;right:90px;z-index:1;display:flex;flex-wrap: nowrap;align-items: center;justify-content: space-between;}
+a.header-call {font-size:1rem;font-weight:bold;text-align:right}
+
+/*.header-detail #header {position:fixed;z-index:888888}*/
+/* nav */
+nav {z-index:1;margin-right:30px}
+nav ul {display:flex;flex-wrap: nowrap;}
+nav li {margin:0 10px}
+nav li a {font-weight:bold}
+nav li a:hover {color:#7723C8}
+
+.header-btn {position:absolute;left: 50%;
+    transform: translateX(-50%) !important;
+    -moz-transform: translateX(-50%) !important;
+    -webkit-transform: translateX(-50%) !important;}
+.header-btn a {position:relative;font-size:1.250rem;padding:0 8px;font-weight:bold}
+.header-btn a::after {content:"";width:100%;height:1px;background-color:#707070;position:absolute;bottom:-15px;left:0;right:0;margin:0 auto}
+.header-btn a:hover {color:#7723c8}
+@media all and (max-width: 55rem) {
+    #header .header-in {top:0}
+    #header .header-in h1.logoarea {transform: scale(0.75);top: 0.5em;left:0x}
+
+    .header-mid {width:235px;top:26px;right:0;left:0;margin:0 auto}
+    nav {margin-right:10px;margin-right:0;display:none}
+    nav li {margin: 0 3px;}
+    nav li a {font-size:14px}
+    a.header-call {display:none}
+    
+}
+
+@-webkit-keyframes ani {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 #DDB8F8;
+    color: black;
+  }
+  30% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 #DDB8F8;
+    color: black;
+  }
+  70% {
+    -webkit-transform: translate3d(0.08em, -0.08em, 0);
+            transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em #DDB8F8;
+    color: black;
+  }
+  100% {
+    -webkit-transform: translate3d(0.08em, -0.08em, 0);
+            transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em #DDB8F8;
+    color: black;
+  }
+}
+@keyframes ani {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 #DDB8F8;
+    color: black;
+  }
+  30% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 #DDB8F8;
+    color: black;
+  }
+  70% {
+    -webkit-transform: translate3d(0.08em, -0.08em, 0);
+            transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em #DDB8F8;
+    color: black;
+  }
+  100% {
+    -webkit-transform: translate3d(0.08em, -0.08em, 0);
+            transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em l#DDB8F8;
+    color: black;
+  }
+}
+.popout span {
+  position: relative;
+  display: inline-block;
+  float:left
+}
+/*
+.popout:nth-child(2) span:nth-child(2),
+.popout:nth-child(3) span:nth-child(2) {margin-right:15px}
+*/
+.popout:hover span {
+    -webkit-animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+    animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+}
+.popout:hover span:nth-last-child(1n) {
+  -webkit-animation-delay: -0.1666666667s;
+          animation-delay: -0.1666666667s;
+}
+.popout:hover span:nth-last-child(2n) {
+  -webkit-animation-delay: -0.3333333333s;
+          animation-delay: -0.3333333333s;
+}
+.popout:hover span:nth-last-child(3n) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+@media screen and (max-width: 55em) {
+    /*
+.popout:nth-child(2) span:nth-child(2),
+.popout:nth-child(3) span:nth-child(2) {margin-right:8px}*/
+}
+
+
+#footer {width:100%;clear:both;padding:9% 0 5%}
+#footer .footer-wrap ul {max-width:1580px;display: -webkit-flex;display:flex;justify-content: space-around;margin:0 auto}
+#footer .footer-wrap li {width:30%}
+#footer .footer-wrap ul * {font-size:1.250rem;font-weight:bold;font-family: 'Ubuntu', sans-serif;}
+@media all and (max-width:93.750em) {
+    #footer .footer-wrap li {text-align:center}
+    #footer .footer-wrap li:first-child{width:30%}
+    #footer .footer-wrap li:nth-child(2){width:20%}
+    #footer .footer-wrap li:last-child {width:50%}
+}
+@media all and (max-width:75.000em) {
+    #footer .footer-wrap ul * {font-size:18px}
+   
+}
+@media all and (max-width: 56.250rem) {
+    #footer {width:100%;margin:0 auto; padding:20% 5% 5%}
+    #footer .footer-wrap ul {display:block;-webkit-display:block;margin:0;text-align:left}
+
+    #footer .footer-wrap li {width:100% !important;margin-bottom:15px;text-align:left}
+    
+}
+@media all and (max-width:40rem){
+    .header-btn {margin-top:2.5rem !important}
+    .header-btn a {font-size:1rem;display:table !important}
+    .header-btn a:first-child {margin-bottom:2rem}
+    .header-btn a::after {bottom:-12px;}
+    #footer {width:100%;margin:0 auto; padding:20% 5% 10% 5%}
+    #footer .footer-wrap li {margin-bottom:13px;font-size:1rem}
+}
