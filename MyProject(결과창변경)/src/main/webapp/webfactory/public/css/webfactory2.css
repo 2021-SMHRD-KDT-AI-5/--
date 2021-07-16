@@ -1,0 +1,114 @@
+
+
+/* 눈부신 생산품들, 구경해 보시겠어요? 
+@media all and (max-width:1024px){
+    .cont-portfolio-list .sub-headline .sub-text h3.stxt p {
+        font-size: 110px
+    }
+}
+@media all and (max-width:768px){
+    .cont-portfolio-list .sub-headline .sub-text h3.stxt p {
+        font-size: 80px
+    }
+}
+@media all and (max-width:640px){
+    .cont-portfolio-list .sub-headline .sub-text h3.stxt p {
+        font-size: 60px
+    }
+}
+@media all and (max-width:414px){
+    .cont-portfolio-list .sub-headline .sub-text h3.stxt p {
+        font-size: 44px;
+    }
+}
+*/
+.moving-object img {position:absolute;left:50%}
+.gooeysvg {
+  fill: #F7BBC2;
+    -webkit-animation: from0to360 30s linear infinite;
+          animation: from0to360 30s linear infinite;
+}
+@-webkit-keyframes from0to360 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes from0to360 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.gooeysvg2 {
+    fill: #F7BBC2;
+      -webkit-animation: from0to360 9s linear infinite;
+            animation: from0to360 9s linear infinite;
+  }
+
+
+#Circle1 {
+  -webkit-animation: from0to360 4s linear infinite;
+          animation: from0to360 4s linear infinite;
+  cx: 150;
+  cy: 145;
+  r: 100;
+  -webkit-transform-origin: 145px 150px;
+          transform-origin: 145px 150px;
+}
+@-webkit-keyframes from360to0 {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes from360to0 {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+#Circle2 {
+  -webkit-animation: from360to0 6s linear infinite;
+          animation: from360to0 6s linear infinite;
+  cx: 150;
+  cy: 155;
+  r: 100;
+  -webkit-transform-origin: 155px 150px;
+          transform-origin: 155px 150px;
+}
+#Circle3 {
+  -webkit-animation: from0to360 6s linear infinite;
+          animation: from0to360 6s linear infinite;
+  cx: 145;
+  cy: 150;
+  r: 100;
+  -webkit-transform-origin: 150px 145px;
+          transform-origin: 150px 145px;
+}
+#Circle4 {
+  -webkit-animation: from360to0 5.5s linear infinite;
+          animation: from360to0 5.5s linear infinite;
+  cx: 155;
+  cy: 150;
+  r: 100;
+  -webkit-transform-origin: 150px 155px;
+          transform-origin: 150px 155px;
+}
