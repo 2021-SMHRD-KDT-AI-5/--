@@ -1,0 +1,14 @@
+
+#canvas{
+  position: absolute;
+  -webkit-filter: url("#goo");
+	filter: url("#goo");
+}
+
+#stats{
+  position:absolute;
+  opacity:0;
+  top:0;
+  left:0;
+  z-index: 3333;
+}
